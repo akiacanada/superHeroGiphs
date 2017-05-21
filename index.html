@@ -143,6 +143,18 @@
         }
       }
 
+      // This function handles events where a hero button is clicked
+      $("#add-gif").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var character = $("#heroName-input").val().trim();
+
+        // Adding movie from the textbox to our array
+        topics.push(character);
+
+        // Calling renderButtons which handles the processing of our movie array
+        renderButtons();
+      });
 
             // Calling the renderButtons function to display the intial buttons
       renderButtons();
